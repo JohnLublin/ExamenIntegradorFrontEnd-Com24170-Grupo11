@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="./js/validacionV3.js"></script> -->
+
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/estilos_contacto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- Contenedor Principal -->
+    <div class="contenedor">
+      <!-- Encabezado -->
+      <header class="encabezado">
+        <div class="encabezado-izq">
+          <img src="./img/AvionPapel.jpg" alt="Avión de papel" />
+        </div>
+        <div class="encabezado-centro">
+          <img src="./img/TravelTour.jpg" alt="Travel Tour" />
+        </div>
+        <div class="encabezado-der">
+          <img src="./img/AgenciaDeViajes.jpg" alt="Agencia de viajes" />
+        </div>
+      </header>
+
+      <!-- Barra de Navegación -->
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+          <li><a href="paquetes.html">Paquetes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <form action="" class="formulario" id="formulario">
+          <h1 class="formulario_titulo">¡Queremos asesorarte!</h1>
+          <br />
+          <p class="formulario_subtitulo">
+            Completa los datos y envianos tu consulta:
+          </p>
+
+          <!-- Formulario -->
+          <div class="formulario_inputs">
+
+            <!-- Formulario Nombre -->
+            <label class="formulario_label">
+              <input
+                type="text"
+                required
+                placeholder=" "
+                class="formulario_input" id="nombre"
+              />
+              <span class="formulario_texto">Ingresa tu nombre:</span>
+            </label>
+
+            <!-- Formulario Apellido -->
+            <label class="formulario_label">
+              <input
+                type="text"
+                required
+                placeholder=" "
+                class="formulario_input" id="apellido"
+              />
+              <span class="formulario_texto">Ingresa tu apellido:</span>
+            </label>
+
+            <!-- Formulario Email -->
+            <label class="formulario_label">
+              <input
+                type="email"
+                required
+                placeholder=" "
+                class="formulario_input" id="email"
+              />
+              <span class="formulario_texto">Ingresa tu email:</span>
+            </label>
+
+          <!-- Formulario Select -->
+          <label class="formulario_select">
+            <span class="formulario_texto">Seleccione su destino:</span>
+            <select name="destino" class="formulario_destino">
+              <option value="allinclusive">All Inclusive</option>
+              <option value="playas">Playas</option>
+              <option value="exoticos">Exóticos</option>
+              <option value="invierno">Invierno</option>
+            </select>
+          </label>
+
+            <!-- Formulario Consulta -->
+            <label class="formulario_label">
+              <textarea
+                type="textarea"
+                rows="6"
+                required
+                placeholder=" "
+              ></textarea>
+              <span class="formulario_texto">Escriba su consulta:</span>
+            </label>
+          </div>
+
+          <!-- Formulario Checkbox -->
+          <div class="formulario_texto">
+          <label class="class="formulario_checkbox">
+            <input
+              type="checkbox"
+              class="formulario_checkbox" id="terminos"
+            />
+            <span class="formulario_checkbox">Acepto los términos y condiciones.</span>
+          </label>
+        </div>
+          <h3 class="formulario_texto" id="obligatorio">* Todos los campos son obligatorios.</h3>
+
+          <!-- Formulario Botón Submit y Reset -->
+          <div class="formulario_botones">
+            <input type="submit" value="Enviar" class="formulario_submit" />
+            <input type="reset" value="Borrar" class="formulario_borrar" />
+          </div>
+        </form>
+
+        <!-- Google Maps -->
+        <div class="mapa">
+          <h1>¿Dónde estamos?</h1>
+          <br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.
+            066850016401!2d-58.3815704!3d-34.6037389!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0
+            !3m2!1ses-419!2sar!4v1716603234861!5m2!1ses-419!2sar"
+            width="50%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </main>
+
+      <!-- Pie de Pagina -->
+      <footer class="pie">
+        <div>
+          <p>Copyright © 2024 Travel Tour.</p>
+        </div>
+        <div class="iconos">
+          <a
+            href="https://www.facebook.com/TurismoNacionAR/?locale=es_LA"
+            target="_blank"
+            ><span class="fab fa-facebook" title="Ir a Facebook"></span
+          ></a>
+          <a
+            href="https://www.instagram.com/turismonacionar/?hl=es"
+            target="_blank"
+            ><span class="fab fa-instagram" title="Ir a Instagram"></span
+          ></a>
+          <a href="https://x.com/TurismoNacionAR" target="_blank"
+            ><span class="fab fa-twitter" title="Ir a Twitter"></span
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UC3m5QCp-mE8PpdaA1zUrTuA"
+            target="_blank"
+            ><span class="fab fa-youtube" title="Ir a Youtube"></span
+          ></a>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>

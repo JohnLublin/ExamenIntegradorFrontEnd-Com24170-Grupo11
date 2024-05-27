@@ -1,0 +1,281 @@
+/* ---------------------------------------------------------
+Estilos del Encabezado 
+------------------------------------------------------------ */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.encabezado {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px;
+  grid-area: encabezado;
+}
+.encabezado img {
+  width: 110px;
+  margin: 0px 15px;
+}
+/* ---------------------------------------------------------
+Estilos del Menú 
+------------------------------------------------------------ */
+.menu {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  grid-area: menu;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: lightskyblue;
+  animation: 0.5s infinite botom-menu;
+}
+
+@keyframes boton-menu {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.15);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------------------------------------------------------
+Estilos del Hero y los Botones 
+------------------------------------------------------------ */
+button {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: #004aad;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button:hover {
+  background-color: #baf4ff;
+  cursor: pointer;
+  color: #004aad;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 30vh;
+  color: white;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./travel-items-assortment-still-life_23-2149617645v2.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: hero;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ---------------------------------------------------------
+Estilos de los Paquetes 
+------------------------------------------------------------ */
+.contenedor-paquetes {
+  display: flex;
+  padding: 10px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.contenedor-paquetes div {
+  margin: 10px;
+}
+
+.contenedor-paquetes img {
+  height: 180px;
+  box-shadow: 0 2px 10px 0 black;
+  transition: 1s;
+}
+
+.contenedor-paquetes img:hover {
+  transform: scale(1.04);
+  transition: 1s;
+}
+
+/* ---------------------------------------------------------
+Estilos del Footer 
+------------------------------------------------------------ */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  background-color: #004aad;
+  color: white;
+  grid-area: pie;
+}
+
+.iconos {
+  display: flex;
+  column-gap: 12px;
+}
+
+.iconos a {
+  color: white;
+  font-size: 24px;
+}
+
+.articulo1 {
+  grid-area: articulo1;
+}
+
+.articulo2 {
+  grid-area: articulo2;
+}
+
+.articulo3 {
+  grid-area: articulo3;
+}
+
+.articulo4 {
+  grid-area: articulo4;
+}
+
+/* ---------------------------------------------------------
+Estilos del Contenedor Grid para pantallas de Celular (425px)
+------------------------------------------------------------ */
+@media (min-width: 425px) {
+  .contenedor {
+    display: grid;
+    grid-template: repeat(5, auto) / 100%;
+    grid-template-areas:
+      "encabezado"
+      "menu"
+      "hero"
+      "articulo1"
+      "articulo2"
+      "articulo3"
+      "articulo4"
+      "pie";
+  }
+
+  #hero {
+    text-wrap: balance;
+  }
+
+  .contenedor-paquetes {
+    display: flex;
+    padding: 3px;
+    overflow: hidden;
+  }
+
+  .contenedor-paquetes div {
+    margin: 5px;
+  }
+
+  .contenedor-paquetes img {
+    height: 195px;
+  }
+}
+
+/* ---------------------------------------------------------
+Estilos del Contenedor Grid para pantallas de Tablet (768px)
+------------------------------------------------------------ */
+@media (min-width: 768px) {
+  .contenedor {
+    display: grid;
+    grid-template: repeat(4, auto) / 50% 50%;
+    grid-template-areas:
+      "encabezado encabezado"
+      "menu menu"
+      "hero hero"
+      "articulo1 articulo2"
+      "articulo3 articulo4"
+      "pie pie";
+  }
+  .contenedor-paquetes {
+    height: 200px;
+    overflow: hidden;
+  }
+  .contenedor-paquetes div p {
+    font-size: 1.5vw;
+  }
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+    grid-area: encabezado;
+  }
+
+  .encabezado img {
+    width: 110px;
+    margin: 0px 15px;
+  }
+
+  /* ---------------------------------------------------------
+Estilos del Contenedor Grid para pantallas de Laptop (1024px)
+------------------------------------------------------------ */
+  @media (min-width: 1024px) {
+    .contenedor {
+      display: grid;
+      grid-template: repeat(4, auto) / 50% 50%;
+      grid-template-areas:
+        "encabezado encabezado"
+        "menu menu"
+        "hero hero"
+        "articulo1 articulo2"
+        "articulo3 articulo4"
+        "pie pie";
+    }
+    .contenedor-paquetes {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .contenedor-paquetes div p {
+      font-size: 1.55vw;
+    }
+    .contenedor-paquetes img {
+      height: 280px;
+    }
+    .encabezado {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 5px;
+      grid-area: encabezado;
+    }
+
+    .encabezado img {
+      width: 110px;
+      margin: 0px 15px;
+    }
+  }
+}
