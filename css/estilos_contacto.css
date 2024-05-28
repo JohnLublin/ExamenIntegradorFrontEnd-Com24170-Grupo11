@@ -54,57 +54,43 @@ Estilos del Menú
     transform: scaleX(1);
   }
 }
+
 /* ---------------------------------------------------------
 Estilos del Formulario 
 ------------------------------------------------------------ */
 main {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-*,
-::after,
-::before {
+
+* {
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
+:placeholder-shown{
+  font: inherit;
 }
 
-input {
+input, option, select {
   font: inherit;
 }
 
 .formulario {
   margin: 40px auto;
-  background-color: #ffffff;
+  background-color: white;
   width: min(350px, 90%);
   border-radius: 10px;
 }
 
-.formulario_titulo {
+#formulario_titulo {
   text-align: center;
   font-size: 1.9rem;
   color: #004aad;
 }
 
-.formulario_subtitulo {
+#formulario_subtitulo {
   text-align: center;
   color: #004aad;
-}
-
-.formulario_inputs {
-  margin: 2rem 0 1.5rem;
-  display: grid;
-  gap: 1.5rem;
-  color: #6b6b6b;
-}
-
-.formulario_label {
-  width: 100%;
-  display: grid;
-  grid-template-areas: "input";
-  
 }
 
 .formulario_input {
@@ -116,86 +102,20 @@ input {
   color: #6b6b6b;
 }
 
-.formulario_texto {
-  grid-area: input;
-  z-index: 100;
-
-  width: max-content;
-  height: 100%;
-
-  margin-left: 0.5rem;
-  padding: 0 0.5rem;
-
-  display: flex;
-  align-items: center;
-
-  transform-origin: left center;
-  transition: transform 0.3s;
-}
-
-.formulario_input:focus + .formulario_texto,
-.formulario_input:not(:placeholder-shown) + .formulario_texto {
-  background-color: white;
-  transform: translateY(-50%) scale(0.7);
-}
-
-.formulario_destino{
+#formulario_select{
   display: flex;
   justify-content: start;
   align-items: normal;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: large;
-  color: #6b6b6b;
-}
-
-.formulario_select{
-  display: flex;
-  justify-content: start;
-  align-items: normal;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: large;
-  color: #6b6b6b;
 }
 
 #obligatorio{
-  font-size: large;
-  color: #6b6b6b;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-style: italic;
-  margin-bottom: 15px;
-
+  color: #6b6b6b;
 }
 
-.formulario_destino:hover{
-  cursor: pointer;
-}
-
-.formulario_submit {
-  display: inline-block;
-  border-radius: 10px;
-  background-color: #0f41e1;
-  padding: 1rem 2rem;
-  color: white;
-  border: none;
-}
-
-.formulario_submit:hover {
-  color: #0f41e1;
-  background-color: #baf4ff;
-  cursor: pointer;
-}
-
-.formulario_borrar {
-  display: inline-block;
-  border-radius: 10px;
-  background-color: #0f41e1;
-  padding: 1rem 2rem;
-  color: white;
-  border: none;
-}
-
-.formulario_borrar:hover {
-  color: #0f41e1;
-  background-color: #baf4ff;
+#formulario_select:hover{
   cursor: pointer;
 }
 
@@ -205,8 +125,7 @@ input {
   align-items: normal;
   padding: 5px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: large;
-  color: #6b6b6b;
+  font-size: medium;
   margin-bottom: 15px;
 }
 
@@ -219,6 +138,36 @@ Estilos de los Botones
   align-items: center;
   background-color: #ffffff;
   padding: 5px;
+}
+
+#b1 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #0f41e1;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+}
+
+#b1:hover {
+  color: #0f41e1;
+  background-color: #baf4ff;
+  cursor: pointer;
+}
+
+#reset {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #0f41e1;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+}
+
+#reset:hover {
+  color: #0f41e1;
+  background-color: #baf4ff;
+  cursor: pointer;
 }
 
 /* ---------------------------------------------------------
@@ -248,6 +197,7 @@ Estilos del Mapa
   grid-area: hero;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 /* ---------------------------------------------------------
 Estilos del iFrame 
 ------------------------------------------------------------ */
@@ -255,6 +205,7 @@ iframe {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 /* ---------------------------------------------------------
 Estilos del Footer 
 ------------------------------------------------------------ */
