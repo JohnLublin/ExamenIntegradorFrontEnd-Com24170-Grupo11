@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="./js/validacionV3.js"></script> -->
-
     <title>Contacto</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,9 +19,9 @@
   </head>
 
   <body>
-
     <!-- Contenedor Principal -->
     <div class="contenedor">
+
       <!-- Encabezado -->
       <header class="encabezado">
         <div class="encabezado-izq">
@@ -48,90 +46,97 @@
       </nav>
 
       <main>
-        <form action="" class="formulario" id="formulario">
-          <h1 class="formulario_titulo">¡Queremos asesorarte!</h1>
+        <div class="formulario">
+          <h1 id="formulario_titulo">¡Queremos asesorarte!</h1>
           <br />
-          <p class="formulario_subtitulo">
+          <p id="formulario_subtitulo">
             Completa los datos y envianos tu consulta:
           </p>
+          <br />
 
-          <!-- Formulario -->
-          <div class="formulario_inputs">
-
+          <form action="" name="formulario" method="get">
             <!-- Formulario Nombre -->
-            <label class="formulario_label">
-              <input
-                type="text"
-                required
-                placeholder=" "
-                class="formulario_input" id="nombre"
-              />
-              <span class="formulario_texto">Ingresa tu nombre:</span>
-            </label>
-
+            <label class="formulario_label" for="">Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              maxlength="30"
+              placeholder="Ingrese su nombre..."
+              class="formulario_input"
+            />
+            <br /><br />
             <!-- Formulario Apellido -->
-            <label class="formulario_label">
-              <input
-                type="text"
-                required
-                placeholder=" "
-                class="formulario_input" id="apellido"
-              />
-              <span class="formulario_texto">Ingresa tu apellido:</span>
-            </label>
-
+            <label class="formulario_label" for="">Apellido:</label>
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              maxlength="30"
+              placeholder="Ingrese su apellido..."
+              class="formulario_input"
+            />
+            <br /><br />
             <!-- Formulario Email -->
-            <label class="formulario_label">
-              <input
-                type="email"
-                required
-                placeholder=" "
-                class="formulario_input" id="email"
-              />
-              <span class="formulario_texto">Ingresa tu email:</span>
-            </label>
-
-          <!-- Formulario Select -->
-          <label class="formulario_select">
-            <span class="formulario_texto">Seleccione su destino:</span>
-            <select name="destino" class="formulario_destino">
-              <option value="allinclusive">All Inclusive</option>
+            <label class="formulario_label" for="">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              maxlength="30"
+              placeholder="Ingrese su email..."
+              class="formulario_input"
+            />
+            <br /><br />
+            <!-- Formulario Radio -->
+            <div>
+              <label for="">Origen del viaje:</label>
+              <input type="radio" name="so" value="baires" /> Buenos Aires
+              <input type="radio" name="so" value="cordoba" /> Córdoba
+            </div>
+            <br />
+            <!-- Formulario Select -->
+            <label class="formulario_label" id="formulario_select" for=""
+              >Tipo de paquete:</label
+            >
+            <select
+              name="interes"
+              class="formulario_input"
+              id="formulario_select"
+            >
+              <option value="elegir">Elegir</option>
+              <option value="inclusive">All Inclusive</option>
               <option value="playas">Playas</option>
               <option value="exoticos">Exóticos</option>
               <option value="invierno">Invierno</option>
             </select>
-          </label>
-
-            <!-- Formulario Consulta -->
-            <label class="formulario_label">
-              <textarea
-                type="textarea"
-                rows="6"
-                required
-                placeholder=" "
-              ></textarea>
-              <span class="formulario_texto">Escriba su consulta:</span>
+            <br />
+            <!-- Formulario TextArea -->
+            <label class="formulario_label" for="">Escriba su consulta:</label>
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="30"
+              rows="5"
+              class="formulario_input"
+              placeholder="Escriba aquí..."
+            ></textarea>
+            <br /><br />
+            <!-- Formulario Checkbox -->
+            <label for="" class="formulario_checkbox">
+              <input type="checkbox" name="terminos" id="terminos" />
+              Acepto los Términos y Condiciones
             </label>
-          </div>
-
-          <!-- Formulario Checkbox -->
-          <div class="formulario_texto">
-          <label class="class="formulario_checkbox">
-            <input
-              type="checkbox"
-              class="formulario_checkbox" id="terminos"
-            />
-            <span class="formulario_checkbox">Acepto los términos y condiciones.</span>
-          </label>
+            <!-- Mensaje Obligatorio -->
+            <p id="obligatorio">* Todos los campos son obligatorios.</p>
+            <br />
+            <!-- Formulario Botones -->
+            <div class="formulario_botones">
+              <input type="submit" id="b1" name="btn" value="Enviar" />
+              <input type="reset" id="reset" name="reset" value="Reset" />
+            </div>
+          </form>
         </div>
-          <h3 class="formulario_texto" id="obligatorio">* Todos los campos son obligatorios.</h3>
-
-          <!-- Formulario Botón Submit y Reset -->
-          <div class="formulario_botones">
-            <input type="submit" value="Enviar" class="formulario_submit" />
-            <input type="reset" value="Borrar" class="formulario_borrar" />
-          </div>
-        </form>
 
         <!-- Google Maps -->
         <div class="mapa">
@@ -180,5 +185,6 @@
       </footer>
     </div>
 
+    <script src="./js/Validacion_Final.js"></script>
   </body>
 </html>
